@@ -14,7 +14,7 @@ def simple_stb_test(tree_dir='./trees'):
 if __name__ == '__main__':
     tree_dir = './trees'
     stb_data = st.SimpleLoad(tree_dir)
-    max_lut_idx = max(stb_data['lut_keys'].values())
+    max_lut_idx = max(stb_data['words_to_keys'].values())
     basic_opts = {}
     basic_opts['class_count'] = 5
     lut_opts = {}

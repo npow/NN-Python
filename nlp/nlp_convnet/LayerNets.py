@@ -35,7 +35,7 @@ class KMaxNet:
         self.full_moms = []
         # Prepare the LUTLayer
         lut_opts = self.net_opts['lut_layer']
-        self.lut_layer = lnl.LUTLayer(lut_opts['max_key'], lut_opts['embed_dim'])
+        self.lut_layer = lnl.LUTLayer(lut_opts['max_key']+1, lut_opts['embed_dim'])
         self.lut_moms = {}
         self.lut_moms['W'] = np.zeros(self.lut_layer.params['W'].shape)
         self.lut_layer.max_norm = lut_opts['max_norm']
